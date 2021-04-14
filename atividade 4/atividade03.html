@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<style>
+img.alta { float: left; height: 420px; width: 300px; }
+h1 { border-bottom-style: inset; }  
+pre { font-size: 1.2em; }
+</style>
+<head>
+  <meta charset="UTF-8">
+</head>
+<body>
+  <img src="ex4_1.jpg" alt="Números" class="alta">
+  <h1> Programa Tabuada </h1>
+  <p>Número:
+    <input type="text" id="camponumero">
+  </p>
+  <input type="button" value="Mostrar Tabuada" id="mostrar">
+  <pre id="tabuada"></pre>
+  <script>
+  function mostrarTabuada() {
+  var camponumero = document.getElementById("camponumero");
+  var Tabuada = document.getElementById("tabuada");
+  var numero = Number(camponumero.value);
+  if (numero == 0 || isNaN(numero)) {
+    alert("Informe um número válido...");
+    camponumero.focus();
+    return;
+  }
+  var resposta = "";
+  for (var i = 1; i <= 10; i++) {
+    resposta = resposta + numero + " x " + i + " = " + numero * i + "\n";
+  }
+  tabuada.textContent = resposta;
+}
+var mostrar = document.getElementById("mostrar");
+mostrar.addEventListener("click", mostrarTabuada);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  </script>
+
+</body>
+
+</html>
